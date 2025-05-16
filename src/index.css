@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-main: 'Inter', sans-serif;
+  --color-bg: #f9f9f9;
+  --color-text: #1a1a1a;
+  --color-subtle: #6B7280;
+  --color-primary: #69b050;       /* Verde principal */
+  --color-primary-light: #7fcf63; /* Verde más claro */
+  --color-accent: #dcb834;        /* Amarillo secundario */
+  --color-accent-light: #efd65a;  /* Amarillo claro */
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #f9f9f9;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23999999' fill-opacity='0.025'%3E%3Ccircle cx='0.5' cy='0.5' r='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  color: var(--color-text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Tipografías */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--color-subtle);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  transition: 0.2s ease;
+}
+a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Botones */
+.btn {
+  @apply px-4 py-2 rounded-lg font-semibold transition;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+}
+.btn-accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+.btn-accent:hover {
+  background-color: var(--color-accent-light);
+}
+
+/* Containers y secciones */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.section {
+  padding: 4rem 0;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}

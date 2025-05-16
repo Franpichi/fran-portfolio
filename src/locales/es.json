@@ -1,0 +1,68 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "home": {
+    "greeting": "Hola, soy Fran Pizzichini",
+    "role": "Desarrollador Full Stack, Diseñador UI/UX y Comunicador Digital",
+    "description": "Combino tecnología, diseño y comunicación para crear experiencias digitales que destacan. Mi enfoque va más allá del código: pienso en el impacto, en el mensaje y en cómo hacer que una marca o producto se sienta único. He trabajado con startups, agencias y clientes que buscaban resultados reales y una identidad fuerte.",
+    "projects": "Ver proyectos",
+    "contact": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "intro": "Soy Fran — un perfil híbrido entre desarrollo, diseño y estrategia de contenidos.",
+    "body": "Trabajo como desarrollador full stack utilizando tecnologías modernas como React, Next.js, Node.js y Firebase. Pero también tengo formación en diseño gráfico y periodismo, lo que me da una visión integral de los productos digitales. Sé contar historias con interfaces, tomar decisiones basadas en usuarios y construir soluciones ágiles, escalables y con identidad. Vivo en Copenhague, abierto a colaborar de forma remota o híbrida en proyectos que necesiten creatividad, técnica y criterio."
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "chronocademy": {
+      "name": "Chronocademy",
+      "role": "Desarrollador Full Stack y Marketing",
+      "description": "Lideré el desarrollo de la plataforma educativa con React y Next.js. Implementé funciones interactivas, integración con Firebase y lógica de negocio en Node.js. También diseñé campañas de marketing digital, automatización de contenidos y estrategia de marca para atraer usuarios desde cero."
+    },
+    "malambo": {
+      "name": "Malambo",
+      "role": "Diseñador de Marca y Consultor de Marketing",
+      "description": "Construí la identidad visual completa de esta marca de indumentaria: logo, paleta, estilo fotográfico y línea gráfica. Además, optimicé su presencia digital con una estrategia SEO orgánica, contenido editorial y redes sociales con propósito."
+    },
+    "worthmore": {
+      "name": "Worthmore",
+      "role": "Desarrollador Frontend",
+      "description": "Colaboré con esta startup de impacto ambiental optimizando la performance del sitio y desarrollando interfaces accesibles. Trabajé con React y SASS, cuidando la semántica y la escalabilidad. También participé en tareas de análisis y conversión junto al equipo de marketing."
+    }
+  },
+  "services": {
+    "title": "Servicios",
+    "web": {
+      "title": "Desarrollo Web Full Stack",
+      "description": "Construyo sitios y aplicaciones modernos que cargan rápido, escalan bien y funcionan en todos los dispositivos. Trabajo con React, Next.js, Node.js y Firebase para ofrecer soluciones sólidas y personalizadas."
+    },
+    "design": {
+      "title": "Diseño UI/UX y Prototipado",
+      "description": "Diseño interfaces limpias y funcionales con Figma. Aplico principios de usabilidad y diseño emocional para que tu producto no solo se vea bien, sino que se sienta bien al usarlo."
+    },
+    "branding": {
+      "title": "Branding e Identidad Visual",
+      "description": "Desarrollo marcas con personalidad: logotipos, guías visuales, narrativa de marca y diseño coherente para que tu identidad tenga impacto desde el primer vistazo."
+    },
+    "marketing": {
+      "title": "Marketing Digital y Contenidos",
+      "description": "Creo estrategias de contenido, newsletters, campañas sociales y optimización SEO orientadas a resultados. Trabajo para conectar con tu audiencia y hacer crecer tu marca con propósito."
+    }
+  },
+  "contact": {
+    "title": "Trabajemos juntos",
+    "subtitle": "¿Tenés un proyecto, startup o idea?",
+    "description": "Estoy abierto a nuevas oportunidades, colaboraciones o trabajos freelance. Si querés llevar tu idea al siguiente nivel, escribime y charlamos. Siempre busco sumar creatividad, técnica y visión.",
+    "button": "Enviar correo"
+  },
+  "thankyou": {
+    "title": "¡Mensaje enviado!",
+    "description": "Gracias por escribirme. Me pondré en contacto con vos lo antes posible."
+  }
+}

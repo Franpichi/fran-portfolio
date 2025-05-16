@@ -1,0 +1,68 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm Fran Pizzichini",
+    "role": "Full Stack Developer, UI/UX Designer & Digital Communicator",
+    "description": "I blend technology, design and communication to build digital experiences that stand out. My work goes beyond just code — I focus on the impact, the story, and how to make a product feel truly unique. I’ve helped startups, agencies and brands craft meaningful results with strong identities.",
+    "projects": "View projects",
+    "contact": "Get in touch"
+  },
+  "about": {
+    "title": "About me",
+    "intro": "I'm Fran — a hybrid between web development, design and strategic content.",
+    "body": "I work as a full stack developer with modern tools like React, Next.js, Node.js and Firebase. With a background in graphic design and journalism, I bring a holistic approach to building digital products. I care about usability, storytelling, scalability and creating tools people actually enjoy using. Based in Copenhagen, I'm open to remote or hybrid work where I can contribute creatively and technically."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "chronocademy": {
+      "name": "Chronocademy",
+      "role": "Full Stack Developer & Marketing Lead",
+      "description": "Led the development of an educational platform using React and Next.js, with Firebase integration and business logic in Node.js. I also designed marketing campaigns, content automation and branding to drive user acquisition from zero."
+    },
+    "malambo": {
+      "name": "Malambo",
+      "role": "Brand Designer & Marketing Consultant",
+      "description": "Created a complete visual identity for this fashion brand: logo, palette, photo style and graphic line. Built a digital presence with strong SEO, curated content and purpose-driven social media."
+    },
+    "worthmore": {
+      "name": "Worthmore",
+      "role": "Frontend Developer",
+      "description": "Worked with this impact-driven startup improving performance and building accessible interfaces with React and SASS. Collaborated closely with marketing to align design, accessibility and conversion strategies."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "web": {
+      "title": "Full Stack Web Development",
+      "description": "I build fast, scalable and mobile-friendly websites and apps using React, Next.js, Node.js and Firebase. Everything is optimized and tailored to your business goals."
+    },
+    "design": {
+      "title": "UI/UX Design & Prototyping",
+      "description": "User-friendly and elegant interfaces designed in Figma. Focused on usability, aesthetics and creating joyful experiences for your users."
+    },
+    "branding": {
+      "title": "Branding & Visual Identity",
+      "description": "Bold and consistent branding that tells your story. From logos and brand guides to visuals that reflect your values across every channel."
+    },
+    "marketing": {
+      "title": "Digital Marketing & Content",
+      "description": "Content plans, newsletters, social campaigns and SEO designed to connect with your audience and grow your brand with meaning."
+    }
+  },
+  "contact": {
+    "title": "Let’s work together",
+    "subtitle": "Have a project, startup or idea?",
+    "description": "I'm open to freelance work, collaborations or full-time roles. Let’s talk about your vision and see how I can help you bring it to life — with creativity, code and clarity.",
+    "button": "Send email"
+  },
+  "thankyou": {
+    "title": "Message sent!",
+    "description": "Thanks for reaching out! I’ll get back to you as soon as possible."
+  }
+}

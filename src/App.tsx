@@ -29,7 +29,7 @@ export default function App() {
                                 content="Desarrollador Full Stack, diseñador UI/UX y comunicador digital. Un perfil creativo y técnico para llevar tu idea al siguiente nivel."
                             />
                             <meta property="og:image" content="/logoFran.png" />
-                            <meta property="og:url" content="https://fran-portfolio.vercel.app" />
+                            <meta property="og:url" content="https://fran-portfolio-kappa.vercel.app" />
                             <meta name="twitter:card" content="summary_large_image" />
                         </Helmet>
 

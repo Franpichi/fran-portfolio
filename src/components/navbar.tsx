@@ -1,24 +1,44 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logoFran.png';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const { t, i18n } = useTranslation();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const links = [
-        { href: '#home', label: t('navbar.home') },
-        { href: '#about', label: t('navbar.about') },
-        { href: '#projects', label: t('navbar.projects') },
-        { href: '#services', label: t('navbar.services') },
-        { href: '#contact', label: t('navbar.contact') },
+        { href: '#home', id: 'home', label: t('navbar.home') },
+        { href: '#about', id: 'about', label: t('navbar.about') },
+        { href: '#projects', id: 'projects', label: t('navbar.projects') },
+        { href: '#services', id: 'services', label: t('navbar.services') },
+        { href: '#contact', id: 'contact', label: t('navbar.contact') },
     ];
+
+    const handleClick = (id: string) => {
+        setIsOpen(false);
+
+        if (location.pathname !== '/') {
+            // Si estás en /thank-you o cualquier otra ruta, primero redirigimos
+            navigate('/');
+            setTimeout(() => {
+                const section = document.getElementById(id);
+                section?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        } else {
+            // Si ya estás en home, solo hace scroll
+            const section = document.getElementById(id);
+            section?.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <header className="bg-white shadow-sm">
             <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 text-base uppercase tracking-wide text-gray-700 font-medium">
                 {/* Logo */}
-                <a href="#home" className="flex items-center gap-2">
+                <a href="/" className="flex items-center gap-2">
                     <img src={logo} alt="Fran Logo" className="h-20 w-auto" />
                 </a>
 
@@ -35,14 +55,13 @@ export default function Navbar() {
                 <nav className={`w-full md:w-auto md:flex md:items-center gap-6 ${isOpen ? 'block mt-4' : 'hidden'} md:mt-0 md:gap-8`}>
                     <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                         {links.map((link) => (
-                            <a
-                                key={link.href}
-                                href={link.href}
-                                onClick={() => setIsOpen(false)}
+                            <button
+                                key={link.id}
+                                onClick={() => handleClick(link.id)}
                                 className="hover:text-[color:var(--color-primary)] transition"
                             >
                                 {link.label}
-                            </a>
+                            </button>
                         ))}
 
                         {/* Idioma */}

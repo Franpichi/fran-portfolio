@@ -34,6 +34,21 @@
       "name": "Worthmore",
       "role": "Desarrollador Frontend",
       "description": "Colaboré con esta startup de impacto ambiental optimizando la performance del sitio y desarrollando interfaces accesibles. Trabajé con React y SASS, cuidando la semántica y la escalabilidad. También participé en tareas de análisis y conversión junto al equipo de marketing."
+    },
+    "flowlio": {
+      "name": "Flowlio",
+      "role": "Desarrollador Full Stack y Diseñador de Producto",
+      "description": "Una plataforma freelance todo-en-uno que desarrollé con Next.js, Express y PostgreSQL. Incluye dashboard para gestionar clientes, propuestas y mensajes, con autenticación JWT y un modo demo premium."
+    },
+    "n8n": {
+      "name": "Automatización con n8n",
+      "role": "Arquitecto de Flujos y Desarrollador",
+      "description": "Diseñé un sistema automatizado con n8n para generar contenido con IA, enviar prompts por Telegram, validar manualmente y guardar resultados en Google Sheets y Drive, todo con flujos modulares y limpios."
+    },
+    "exiles": {
+      "name": "Exiles Rugby",
+      "role": "Redes sociales y marketing",
+      "description": "Gestión de redes sociales del equipo de rugby danés. Diseño de contenidos, aumento de seguidores y cobertura de partidos y eventos con una identidad visual clara."
     }
   },
   "services": {

@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import chronoImg from '../assets/chrono.png';
 import malamboImg from '../assets/malambo.png';
 import worthmoreImg from '../assets/worthmore.png';
+import flowlioImg from '../assets/flowlioImg.png';
+import n8nImg from '../assets/n8nImg.png';
+import exilesImg from '../assets/exilesImg.png';
 
 const projects = [
     {
@@ -17,6 +20,18 @@ const projects = [
     {
         key: 'worthmore',
         img: worthmoreImg,
+    },
+    {
+        key: 'flowlio',
+        img: flowlioImg,
+    },
+    {
+        key: 'n8n',
+        img: n8nImg,
+    },
+    {
+        key: 'exiles',
+        img: exilesImg,
     },
 ];
 

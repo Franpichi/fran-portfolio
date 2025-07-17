@@ -12,8 +12,8 @@ i18n
     .use(initReactI18next)
     .init({
       resources,
-      lng: 'en', // 👉 esto define el idioma por defecto
-      fallbackLng: 'en', // 👉 si no encuentra el idioma del navegador, usa inglés
+      lng: 'en',
+      fallbackLng: 'en',
       interpolation: {
         escapeValue: false
       }

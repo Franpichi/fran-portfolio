@@ -1,39 +1,57 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import Layout from '../components/layout';
+import { motion } from 'framer-motion';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default function ThankYou() {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  return (
-    <Layout>
-      <div className="min-h-screen flex flex-col justify-center items-center px-4 py-20 text-center">
-        <h1 className="text-4xl font-bold text-green-600 mb-4">✅</h1>
-        <h2 className="text-2xl font-bold mb-2">{t('thankyou.title')}</h2>
-        <p className="text-gray-600 max-w-xl mb-8">{t('thankyou.description')}</p>
+    return (
+        <>
+            <Navbar />
+            <div className="min-h-screen flex flex-col justify-center items-center px-4 py-20 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(0,200,180,0.06)_0%,transparent_70%)] pointer-events-none" />
 
-        <div className="flex gap-4">
-          <Link
-            to="/"
-            className="bg-[color:var(--color-primary)] text-white px-6 py-2 rounded-md font-semibold hover:bg-[color:var(--color-primary-light)] transition"
-          >
-            {t('home.greeting')}
-          </Link>
-          <Link
-            to="/#contact"
-            onClick={() => {
-              // Scroll manual tras navegación si querés asegurarte:
-              setTimeout(() => {
-                const contactSection = document.getElementById('contact');
-                contactSection?.scrollIntoView({ behavior: 'smooth' });
-              }, 100);
-            }}
-            className="border border-[color:var(--color-primary)] text-[color:var(--color-primary)] px-6 py-2 rounded-md font-semibold hover:bg-[color:var(--color-primary)] hover:text-white transition"
-          >
-            {t('navbar.contact')}
-          </Link>
-        </div>
-      </div>
-    </Layout>
-  );
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="relative"
+                >
+                    <div className="text-6xl mb-6">✦</div>
+                    <h1
+                        className="text-4xl md:text-5xl font-bold mb-4"
+                        style={{
+                            fontFamily: 'Syne, sans-serif',
+                            background: 'linear-gradient(135deg, #00c8b4, #0ea5e9)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text',
+                        }}
+                    >
+                        {t('thankyou.title')}
+                    </h1>
+                    <p className="text-[#7fa8a0] max-w-md mx-auto mb-10 leading-relaxed">
+                        {t('thankyou.description')}
+                    </p>
+
+                    <div className="flex gap-4 justify-center">
+                        <Link
+                            to="/"
+                            className="px-6 py-3 rounded-lg font-bold text-sm transition-all duration-300 hover:opacity-90"
+                            style={{
+                                background: 'linear-gradient(135deg, #00c8b4, #0ea5e9)',
+                                color: '#040d14',
+                                fontFamily: 'Syne, sans-serif',
+                            }}
+                        >
+                            ← Back home
+                        </Link>
+                    </div>
+                </motion.div>
+            </div>
+            <Footer />
+        </>
+    );
 }

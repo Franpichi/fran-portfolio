@@ -1,49 +1,52 @@
-import { useTranslation } from 'react-i18next';
-import fran from '../assets/foto.png';
+import profile from "../assets/profile.png";
 
-export default function Home() {
-    const { t } = useTranslation();
+const Home = () => {
+  return (
+    <section className="min-h-[90vh] flex flex-col md:flex-row items-center justify-between gap-12 py-20">
+      
+      {/* TEXT */}
+      <div className="max-w-xl">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          I design and build
+          <span className="text-accent block">digital products</span>
+        </h1>
 
-    return (
-        <section id="home" className="text-center py-20 px-4">
-            <div className="mb-16">
-                <img
-                    src={fran}
-                    alt="Logo"
-                    // className="mx-auto h-96 rounded-full border-4 border-[color:var(--color-primary)] shadow-md object-cover"
-                    className="mx-auto h-96 rounded-full border-4 border-[color:var(--color-primary)] shadow-md object-cover transition-transform duration-300 hover:scale-105"
-                />
-            </div>
+        <p className="mt-6 text-lg text-textSecondary">
+          Developer, designer and strategist focused on building products that
+          actually solve problems and scale.
+        </p>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-[color:var(--color-primary)] mb-6">
-                {t('home.greeting', '¡Hola! Soy Fran Pizzichini')}
-            </h1>
+        <div className="mt-8 flex gap-4">
+          <a
+            href="#projects"
+            className="bg-accent px-6 py-3 rounded-xl font-semibold hover:opacity-90"
+          >
+            View Projects
+          </a>
 
-            <h2 className="text-xl md:text-2xl text-gray-700 font-medium mb-6">
-                {t('home.role', 'Desarrollador Web · Diseñador UX/UI · Periodista Digital')}
-            </h2>
+          <a
+            href="#contact"
+            className="border border-gray-600 px-6 py-3 rounded-xl hover:border-accent"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
 
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-10">
-                {t(
-                    'home.description',
-                    'Combino creatividad, estrategia y código para construir experiencias digitales que conectan. Con experiencia en startups y proyectos freelance, desarrollo productos visualmente atractivos, funcionales y centrados en el usuario.'
-                )}
-            </p>
+      {/* IMAGE */}
+      <div className="relative">
+        <div className="w-[280px] md:w-[360px] rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src={profile}
+            alt="Fran"
+            className="object-cover w-full h-full"
+          />
+        </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <a
-                    href="#projects"
-                    className="px-6 py-3 border border-[color:var(--color-primary)] text-[color:var(--color-primary)] rounded hover:bg-[color:var(--color-primary)] hover:text-white transition"
-                >
-                    {t('home.projects', 'Ver proyectos')}
-                </a>
-                <a
-                    href="#contact"
-                    className="px-6 py-3 border border-[color:var(--color-accent)] text-[color:var(--color-accent)] rounded hover:bg-[color:var(--color-accent)] hover:text-white transition"
-                >
-                    {t('home.contact', 'Hablemos')}
-                </a>
-            </div>
-        </section>
-    );
-}
+        <div className="absolute -inset-1 bg-accent opacity-20 blur-2xl rounded-2xl -z-10" />
+      </div>
+    </section>
+  );
+};
+
+export default Home;

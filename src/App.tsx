@@ -7,7 +7,6 @@ import Services from './pages/services';
 import Contact from './pages/contact';
 import ThankYou from './pages/thankyou';
 import Footer from './components/footer';
-
 import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -20,20 +19,13 @@ export default function App() {
                         <>
                             <Helmet>
                                 <title>Fran Pizzichini – Portfolio Web</title>
-                                <meta
-                                    name="description"
-                                    content="Portfolio de Fran Pizzichini. Desarrollo web, diseño visual y comunicación estratégica para proyectos digitales únicos."
-                                />
+                                <meta name="description" content="Portfolio de Fran Pizzichini. Desarrollo web, diseño visual y comunicación estratégica para proyectos digitales únicos." />
                                 <meta property="og:title" content="Fran Pizzichini – Portfolio Web" />
-                                <meta
-                                    property="og:description"
-                                    content="Desarrollador Full Stack, diseñador UI/UX y comunicador digital. Un perfil creativo y técnico para llevar tu idea al siguiente nivel."
-                                />
+                                <meta property="og:description" content="Desarrollador Full Stack, diseñador UI/UX y comunicador digital." />
                                 <meta property="og:image" content="/og-image.png" />
                                 <meta property="og:url" content="https://fran-portfolio-kappa.vercel.app" />
                                 <meta name="twitter:card" content="summary_large_image" />
                             </Helmet>
-
                             <Navbar />
                             <Home />
                             <About />

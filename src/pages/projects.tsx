@@ -7,10 +7,18 @@ import worthmoreImg from '../assets/worthmore.png';
 import flowlioImg from '../assets/flowlioImg.png';
 import n8nImg from '../assets/n8nImg.png';
 import exilesImg from '../assets/exilesImg.png';
-import rumblaImg from '../assets/rumblaImg.png';
+import rumblaImg from '../assets/rumbaImg.png';
 import vikinorImg from '../assets/vikinorImg.png';
-// Rumbla & Vikinor use placeholder covers with styled overlays
-const projects = [
+
+type Project = {
+    key: string;
+    img: string | null;
+    gradient?: string;
+    emoji?: string;
+    isNew?: boolean;
+};
+
+const projects: Project[] = [
     { key: 'rumbla', img: rumblaImg, gradient: 'from-[#00c8b4] to-[#0ea5e9]', emoji: '🗺️', isNew: true },
     { key: 'vikinor', img: vikinorImg, gradient: 'from-[#0ea5e9] to-[#6366f1]', emoji: '⚡', isNew: true },
     { key: 'chronocademy', img: chronoImg },
@@ -26,7 +34,6 @@ export default function Projects() {
 
     return (
         <section id="projects" className="py-28 px-6 relative overflow-hidden">
-            {/* BG glow */}
             <div className="absolute left-0 top-1/2 w-72 h-72 bg-[rgba(0,200,180,0.04)] rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-6xl mx-auto">
@@ -57,7 +64,6 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: index * 0.08 }}
                         >
-                            {/* Image / placeholder */}
                             <div className="relative h-44 overflow-hidden">
                                 {img ? (
                                     <img
@@ -70,9 +76,7 @@ export default function Projects() {
                                         <span className="text-5xl">{emoji}</span>
                                     </div>
                                 )}
-                                {/* Overlay gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1e2e] via-transparent to-transparent opacity-80" />
-                                {/* New badge */}
                                 {isNew && (
                                     <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#00c8b4] text-[#040d14]">
                                         New
@@ -80,7 +84,6 @@ export default function Projects() {
                                 )}
                             </div>
 
-                            {/* Content */}
                             <div className="p-5">
                                 <h3
                                     className="text-lg font-bold text-[#e8f4f2] mb-1"

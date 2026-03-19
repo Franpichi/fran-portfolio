@@ -1,91 +1,60 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useNavigate } from 'react-router-dom';
-import logo from '../assets/logoFran.png';
+import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
-export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const { t, i18n } = useTranslation();
-    const location = useLocation();
-    const navigate = useNavigate();
+const Navbar = () => {
+  const { i18n } = useTranslation();
+  const location = useLocation();
+  const [lang, setLang] = useState(i18n.language);
 
-    const links = [
-        { href: '#home', id: 'home', label: t('navbar.home') },
-        { href: '#about', id: 'about', label: t('navbar.about') },
-        { href: '#projects', id: 'projects', label: t('navbar.projects') },
-        { href: '#services', id: 'services', label: t('navbar.services') },
-        { href: '#contact', id: 'contact', label: t('navbar.contact') },
-    ];
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setLang(lng);
+  };
 
-    const handleClick = (id: string) => {
-        setIsOpen(false);
+  const navItem = (to: string, label: string) => (
+    <Link
+      to={to}
+      className={`px-3 py-2 hover:text-white ${
+        location.pathname === to ? 'text-white' : 'text-textSecondary'
+      }`}
+    >
+      {label}
+    </Link>
+  );
 
-        if (location.pathname !== '/') {
-            // Si estás en /thank-you o cualquier otra ruta, primero redirigimos
-            navigate('/');
-            setTimeout(() => {
-                const section = document.getElementById(id);
-                section?.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
-        } else {
-            // Si ya estás en home, solo hace scroll
-            const section = document.getElementById(id);
-            section?.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+  return (
+    <nav className="sticky top-0 z-50 flex items-center justify-between bg-secondary/70 backdrop-blur-lg px-6 py-4 border-b border-slate-800">
+      <Link to="/" className="text-2xl font-bold text-white">
+        FP
+      </Link>
+      <div className="flex gap-6">
+        {navItem('/', i18n.t('nav.home', 'Home'))}
+        {navItem('/about', i18n.t('nav.about', 'About'))}
+        {navItem('/projects', i18n.t('nav.projects', 'Projects'))}
+        {navItem('/services', i18n.t('nav.services', 'Services'))}
+        {navItem('/contact', i18n.t('nav.contact', 'Contact'))}
+      </div>
+      <div className="flex gap-2">
+        <button
+          onClick={() => changeLanguage('en')}
+          className={`px-3 py-1 rounded-md text-sm ${
+            lang === 'en' ? 'bg-accent text-white' : 'text-textSecondary border border-slate-700'
+          }`}
+        >
+          EN
+        </button>
+        <button
+          onClick={() => changeLanguage('es')}
+          className={`px-3 py-1 rounded-md text-sm ${
+            lang === 'es' ? 'bg-accent text-white' : 'text-textSecondary border border-slate-700'
+          }`}
+        >
+          ES
+        </button>
+      </div>
+    </nav>
+  );
+};
 
-    return (
-        <header className="bg-white shadow-sm">
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 text-base uppercase tracking-wide text-gray-700 font-medium">
-                {/* Logo */}
-                <a href="/" className="flex items-center gap-2">
-                    <img src={logo} alt="Fran Logo" className="h-20 w-auto" />
-                </a>
-
-                {/* Botón mobile */}
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-gray-600 text-2xl"
-                    aria-label="Toggle menu"
-                >
-                    ☰
-                </button>
-
-                {/* Navegación */}
-                <nav className={`w-full md:w-auto md:flex md:items-center gap-6 ${isOpen ? 'block mt-4' : 'hidden'} md:mt-0 md:gap-8`}>
-                    <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-                        {links.map((link) => (
-                            <button
-                                key={link.id}
-                                onClick={() => handleClick(link.id)}
-                                className="hover:text-[color:var(--color-primary)] transition"
-                            >
-                                {link.label}
-                            </button>
-                        ))}
-
-                        {/* Idioma */}
-                        <div className="flex gap-2 mt-2 md:mt-0">
-                            <button
-                                onClick={() => i18n.changeLanguage('en')}
-                                className={`px-2 py-1 rounded text-sm border hover:text-[color:var(--color-accent)] transition ${
-                                    i18n.language === 'en' ? 'border-[color:var(--color-accent)] font-bold' : 'border-transparent'
-                                }`}
-                            >
-                                EN
-                            </button>
-                            <button
-                                onClick={() => i18n.changeLanguage('es')}
-                                className={`px-2 py-1 rounded text-sm border hover:text-[color:var(--color-accent)] transition ${
-                                    i18n.language === 'es' ? 'border-[color:var(--color-accent)] font-bold' : 'border-transparent'
-                                }`}
-                            >
-                                ES
-                            </button>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    );
-}
+export default Navbar;

@@ -80,4 +80,18 @@
     "title": "Message sent!",
     "description": "Thanks for reaching out! I’ll get back to you as soon as possible."
   }
+  {
+  "title": "Projects",
+  "subtitle": "A selection of digital products, brands and experiences I have worked on across design, development and strategy.",
+  "rumbla": {
+    "name": "Rumbla",
+    "role": "UX/UI Design · Product Strategy · Branding",
+    "description": "A gamified mobile running app designed to turn the city into a competitive territory through community, progress and motivation."
+  },
+  "vikinor": {
+    "name": "Vikinor",
+    "role": "Marketing · Design · Product Communication",
+    "description": "Work focused on visual communication, product specifications, marketing assets and corporate materials for an industrial company building technical solutions."
+  }
+}
 }

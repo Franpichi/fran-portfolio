@@ -10,8 +10,8 @@ import exilesImg from '../assets/exilesImg.png';
 
 // Rumbla & Vikinor use placeholder covers with styled overlays
 const projects = [
-    { key: 'rumbla', img: null, gradient: 'from-[#00c8b4] to-[#0ea5e9]', emoji: '🗺️', isNew: true },
-    { key: 'vikinor', img: null, gradient: 'from-[#0ea5e9] to-[#6366f1]', emoji: '⚡', isNew: true },
+    { key: 'rumbla', img: rumblaImg, gradient: 'from-[#00c8b4] to-[#0ea5e9]', emoji: '🗺️', isNew: true },
+    { key: 'vikinor', img: vikinorImg, gradient: 'from-[#0ea5e9] to-[#6366f1]', emoji: '⚡', isNew: true },
     { key: 'chronocademy', img: chronoImg },
     { key: 'malambo', img: malamboImg },
     { key: 'worthmore', img: worthmoreImg },

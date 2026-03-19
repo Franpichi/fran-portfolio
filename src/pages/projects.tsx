@@ -7,7 +7,8 @@ import worthmoreImg from '../assets/worthmore.png';
 import flowlioImg from '../assets/flowlioImg.png';
 import n8nImg from '../assets/n8nImg.png';
 import exilesImg from '../assets/exilesImg.png';
-
+import rumblaImg from '../assets/rumblImg.png';
+import vikinorImg from '../assets/vikinorImg.png';
 // Rumbla & Vikinor use placeholder covers with styled overlays
 const projects = [
     { key: 'rumbla', img: rumblaImg, gradient: 'from-[#00c8b4] to-[#0ea5e9]', emoji: '🗺️', isNew: true },

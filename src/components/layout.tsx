@@ -1,14 +1,12 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from './navbar';
+import Footer from './footer';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-secondary text-white min-h-screen font-sans">
+    <>
       <Navbar />
-      <main className="px-6 md:px-16 lg:px-32">{children}</main>
+      <main className="min-h-screen px-6 py-16 max-w-6xl mx-auto">{children}</main>
       <Footer />
-    </div>
+    </>
   );
-};
-
-export default Layout;
+}

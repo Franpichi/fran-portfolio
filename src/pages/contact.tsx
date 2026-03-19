@@ -1,74 +1,66 @@
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const { t } = useTranslation();
 
   return (
-      <section id="contact" className="py-20 px-6 text-center">
-        <div className="max-w-xl mx-auto">
-          {/* Encabezados */}
-          <h1 className="text-3xl md:text-4xl font-bold text-[color:var(--color-primary)] mb-4">
-            {t('contact.title')}
-          </h1>
-          <h2 className="text-lg md:text-xl text-gray-700 mb-6">
-            {t('contact.subtitle')}
-          </h2>
-          <p className="text-gray-600 mb-8 leading-relaxed">
-            {t('contact.description')}
-          </p>
-
-          {/* Formulario */}
-          <form
-              action="https://formsubmit.co/franpizzichini@gmail.com"
-              method="POST"
-              className="space-y-4 text-left"
+    <section id="contact" className="py-24 bg-secondary">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-5xl font-bold text-white mb-4"
+        >
+          {t('contact.title', 'Contacto')}
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-textSecondary max-w-xl mx-auto mb-8"
+        >
+          {t(
+            'contact.description',
+            '¿Tienes una idea o un proyecto en mente? Estoy abierto a colaborar en proyectos interesantes.'
+          )}
+        </motion.p>
+        <form
+          action="https://formspree.io/f/mayourform" // coloca tu endpoint real
+          method="POST"
+          className="grid gap-6 max-w-lg mx-auto"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder={t('contact.name', 'Nombre')}
+            className="w-full rounded-md bg-card border border-slate-700 p-3 text-sm text-white focus:border-accent focus:outline-none"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder={t('contact.email', 'Correo electrónico')}
+            className="w-full rounded-md bg-card border border-slate-700 p-3 text-sm text-white focus:border-accent focus:outline-none"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder={t('contact.message', 'Mensaje')}
+            className="w-full h-32 rounded-md bg-card border border-slate-700 p-3 text-sm text-white focus:border-accent focus:outline-none"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            className="mt-4 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-blue-500"
           >
-            <input type="hidden" name="_captcha" value="false" />
-
-            <div>
-              <input
-                  type="text"
-                  name="name"
-                  placeholder={t('Name')}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)] transition"
-              />
-            </div>
-
-            <div>
-              <input
-                  type="email"
-                  name="email"
-                  placeholder={t('Email')}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)] transition"
-              />
-            </div>
-
-            <div>
-            <textarea
-                name="message"
-                placeholder={t('Message')}
-                rows={5}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)] transition"
-            />
-            </div>
-
-            <button
-                type="submit"
-                className="w-full py-3 rounded-md bg-[color:var(--color-primary)] text-white font-semibold hover:bg-[color:var(--color-primary-light)] transition"
-            >
-              {t('contact.button')}
-            </button>
-
-            <input
-                type="hidden"
-                name="_next"
-                value="https://fran-portfolio-kappa.vercel.app/thank-you"
-            />
-          </form>
-        </div>
-      </section>
+            {t('contact.send', 'Enviar mensaje')}
+          </button>
+        </form>
+      </div>
+    </section>
   );
 }
